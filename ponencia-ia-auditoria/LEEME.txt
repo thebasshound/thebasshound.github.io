@@ -1,0 +1,33 @@
+MICROSITIO «AUDITORÍA INTERNA EN LA ERA DE LA IA»
+Dirección final: https://thebasshound.github.io/ponencia-ia-auditoria/
+
+CÓMO SUBIRLO (desde el navegador)
+1. Descomprime el .zip. Renombra la carpeta «sitio» a «ponencia-ia-auditoria».
+2. Entra a github.com y abre tu repositorio thebasshound.github.io.
+3. Pulsa «Add file» > «Upload files» y arrastra la carpeta completa «ponencia-ia-auditoria».
+   Si el navegador no acepta carpetas, usa Chrome o Edge.
+4. Escribe un mensaje (por ejemplo «Micrositio de la ponencia») y pulsa «Commit changes».
+5. Espera uno o dos minutos y abre la dirección final. Tu página actual de la raíz no cambia.
+
+TU JUEGO CISA
+Reemplaza el archivo juego-cisa.html por el de tu juego, con ese mismo nombre.
+Si tu juego usa más archivos, súbelos junto a él.
+
+DATOS QUE FALTAN (archivo assets/config.js)
+- encuesta: el enlace de tu encuesta. Sin él, el botón dice «Encuesta próximamente».
+- formspree: crea un formulario gratis en formspree.io y pega el código que va después de /f/.
+  Sin él, el formulario de contacto avisa que aún no está activo.
+- goatcounter: crea una cuenta gratis en goatcounter.com y pega tu código. Sin él, no se cuentan visitas.
+
+PARA PROYECTAR AL FINAL DE LA PONENCIA
+Abre https://thebasshound.github.io/ponencia-ia-auditoria/qr.html en pantalla completa.
+Si cambias el nombre de la carpeta, el QR deja de servir: avísame y lo genero de nuevo.
+
+LISTA DE VERIFICACIÓN DESPUÉS DE SUBIR
+[ ] Abre la página en tu celular escaneando el QR.
+[ ] Descarga el .pptx y el .pdf desde «Presentación».
+[ ] En «Prompts», llena un campo y pulsa «Copiar prompt».
+[ ] En «Evaluador», responde las 8 preguntas y copia la ficha.
+[ ] Cambia a EN y vuelve a ES.
+[ ] Abre «Juego CISA» y confirma que carga tu juego.
+[ ] Envía un mensaje de prueba desde «Sobre mí» (cuando actives Formspree).

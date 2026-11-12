@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taller de prompts para auditores · Omar Sánchez</title>
+<meta name="description" content="Generador de 16 prompts de auditoría, ejercicios guiados y hábitos de uso responsable.">
+<meta property="og:title" content="Taller de prompts para auditores">
+<meta property="og:description" content="Generador de 16 prompts de auditoría, ejercicios guiados y hábitos de uso responsable.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="es" href="https://thebasshound.github.io/ponencia-ia-auditoria/prompts.html">
+<link rel="alternate" hreflang="en" href="https://thebasshound.github.io/ponencia-ia-auditoria/en/prompts.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Inicio">b4ssh0und<span>_</span></a>
+    <nav aria-label="Secciones"><a href="index.html">Inicio</a><a href="presentacion.html">Presentación</a><a href="prompts.html" aria-current="page">Prompts</a><a href="agentes.html">Agentes</a><a href="evaluador.html">Evaluador</a><a href="recursos.html">Recursos</a><a href="sobre-mi.html">Sobre mí</a><a href="juego-cisa.html">Juego CISA</a></nav>
+    <a class="tool" href="en/prompts.html" lang="en" hreflang="en">EN</a>
+    <button class="tool" id="theme" type="button" aria-label="Cambiar entre tema claro y oscuro">Tema</button>
+  </div>
+</header>
+<main id="contenido">
+<div class="wrap phead"><span class="eyebrow">Taller</span><h1>Prompts para auditores</h1><p class="lead">Arma 16 prompts de auditoría con tu propio contexto, practica con tres ejercicios y llévate seis hábitos para que cada prompt sirva como evidencia.</p></div>
+<section class="first"><div class="wrap">
+  <span class="eyebrow">Fundamentos</span><h2>Ocho componentes, un solo prompt</h2>
+  <p class="sub">La guía de prompts del IIA para auditores internos identifica ocho componentes. No siempre hacen falta todos: con rol, contexto, tarea y formato el resultado ya cambia.</p>
+  <div class="example"><span style="--c:var(--amber)">Eres auditor interno senior especializado en compras.</span> <span style="--c:var(--cyan)">Auditamos Cuentas por Pagar de una manufacturera mediana con SAP; el periodo tiene 12,480 facturas.</span> <span style="--c:var(--teal)">Propón 10 procedimientos para probar la conciliación a tres vías.</span> <span style="--c:var(--violet)">Entrega una tabla: Riesgo · Procedimiento · Tipo de prueba · Evidencia.</span> <span style="--c:var(--coral)">Solo controles preventivos; máximo dos frases por celda.</span> <span style="--c:var(--amber)">Usa este estilo: «Inspeccionar que cada factura tenga OC y recepción aprobadas antes del pago».</span> <span style="--c:var(--cyan)">Antes de listar, analiza paso a paso dónde puede fallar el control.</span> <span style="--c:var(--teal)">Si te falta información, pregúntame antes de responder.</span></div><ul class="legend"><li style="--c:var(--amber)">Rol: Perspectiva y vocabulario</li><li style="--c:var(--cyan)">Contexto: Lo que la IA no sabe de ti</li><li style="--c:var(--teal)">Tarea: Qué hacer, en concreto</li><li style="--c:var(--violet)">Formato: Cómo entregarlo</li><li style="--c:var(--coral)">Restricciones: Límites del alcance</li><li style="--c:var(--amber)">Ejemplo: El estilo que esperas</li><li style="--c:var(--cyan)">Razonamiento: Pensar antes de responder</li><li style="--c:var(--teal)">Conversación: Preguntar si falta algo</li></ul>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Técnicas</span><h2>Cinco técnicas y cuándo usarlas</h2>
+  <p class="sub">A mayor riesgo de la tarea, más estructura y más revisión humana.</p>
+  <div class="tablewrap"><table><tr><th>Técnica</th><th>Cuándo</th><th>Ejemplo</th></tr><tr><td><b>Sin ejemplos</b></td><td>Tareas simples y de bajo riesgo</td><td class='mono' style='font-size:14px'>«Lista cinco indicadores de riesgo de fraude en nómina.»</td></tr><tr><td><b>Con ejemplos</b></td><td>Cuando el formato importa</td><td class='mono' style='font-size:14px'>«Este es un plan de acción modelo. Redacta uno igual para…»</td></tr><tr><td><b>Paso a paso</b></td><td>Riesgos, recorridos y brechas de control</td><td class='mono' style='font-size:14px'>«Analiza paso a paso los riesgos del alta de proveedores y luego resume los cinco principales.»</td></tr><tr><td><b>Con rol</b></td><td>Para adoptar la mirada de un especialista</td><td class='mono' style='font-size:14px'>«Eres experto en SOX 404. ¿Este control cumpliría lo que esperaría el auditor externo?»</td></tr><tr><td><b>Iterativo</b></td><td>Planeación y trabajos complejos</td><td class='mono' style='font-size:14px'>Riesgos → objetivo para el riesgo 3 → evidencia y muestreo → plantilla del papel de trabajo</td></tr></table></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Generador</span><h2>Los 16 prompts, con tu contexto</h2>
+  <p class="sub">Elige una fase, llena los campos y copia el prompt. IIA indica que viene de la guía del IIA, traducido y adaptado; PROPIO, que es una propuesta de esta ponencia. No pegues datos confidenciales en herramientas no aprobadas.</p>
+  <div id="gen"></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Práctica</span><h2>Tres ejercicios guiados</h2>
+  <p class="sub">Escribe tu versión, revísala con la lista y compara con la solución. Lo que escribas no se guarda ni se envía.</p>
+  <div style="display:grid;gap:16px"><div class="box ex"><div><span class="folio" style="--c:var(--violet)">EJERCICIO 1</span><h3>Arregla este prompt</h3></div><p class="out">«Revisa este control y dime si está bien.»</p><p class="dim" style="margin:0">Control: «El gerente de Compras revisa periódicamente las altas y modificaciones del maestro de proveedores.» Reescribe el prompt con al menos cinco de los ocho componentes.</p>
+  <label for="e1t">Tu versión<textarea id="e1t" placeholder="Escribe aquí tu prompt…"></textarea></label>
+  <div><p class="dim" style="margin:0 0 8px">Autoevaluación</p><ul class="checks"><li><label><input type="checkbox" id="e1c0"> Le di un rol</label></li><li><label><input type="checkbox" id="e1c1"> Expliqué el contexto del proceso</label></li><li><label><input type="checkbox" id="e1c2"> La tarea dice qué debe encontrar</label></li><li><label><input type="checkbox" id="e1c3"> Pedí un formato</label></li><li><label><input type="checkbox" id="e1c4"> Puse un límite o pedí que preguntara</label></li></ul></div>
+  <details><summary>Ver solución</summary><p class="out">Eres especialista en auditoría de controles. El control pertenece al proceso de Cuentas por Pagar; las altas de proveedores se hacen en SAP. Identifica (A) deficiencias de diseño, (B) lenguaje ambiguo que dificulte probarlo y (C) mejoras. Responde en una tabla con esas tres columnas. No evalúes la operación, solo el diseño. Si necesitas datos del proceso, pregúntame.</p><p>Una buena respuesta señala que «periódicamente» no dice cada cuánto, que no se sabe si revisa todas las altas o una muestra, qué evidencia deja, si hay segregación entre quien da de alta y quien revisa, y qué pasa si encuentra un error.</p></details></div><div class="box ex"><div><span class="folio" style="--c:var(--violet)">EJERCICIO 2</span><h3>Extrae datos sin que la IA invente</h3></div><p class="dim" style="margin:0">Tienes 20 facturas escaneadas. Escribe un prompt que extraiga número, proveedor, fecha e importe total, y que no pueda inventar un valor dudoso.</p>
+  <label for="e2t">Tu versión<textarea id="e2t" placeholder="Escribe aquí tu prompt…"></textarea></label>
+  <div><p class="dim" style="margin:0 0 8px">Autoevaluación</p><ul class="checks"><li><label><input type="checkbox" id="e2c0"> Prohibí inferir o estimar</label></li><li><label><input type="checkbox" id="e2c1"> Pedí marcar lo dudoso como «no clara»</label></li><li><label><input type="checkbox" id="e2c2"> Pedí la referencia al texto fuente</label></li><li><label><input type="checkbox" id="e2c3"> Pedí una fila por factura</label></li></ul></div>
+  <details><summary>Ver solución</summary><p>Usa el prompt P-09 del generador. Una salida verificable se ve así (datos ficticios):</p><div class="tablewrap"><table><tr><th>Factura</th><th>Proveedor</th><th>Importe</th><th>Fuente</th></tr><tr><td>A-1021</td><td>Proveedora Ejemplo</td><td>$48,720.00</td><td>p.1 «Total a pagar»</td></tr><tr><td>B-0387</td><td>Servicios Demo</td><td>$300,208.00</td><td>p.2 «Importe neto»</td></tr><tr><td>C-5510</td><td>Logística Ficticia</td><td><b>NO CLARA</b></td><td>Dos totales distintos (p.1 y p.3)</td></tr></table></div><p>La fila que importa es la tercera: la IA no eligió un total por ti.</p></details></div><div class="box ex"><div><span class="folio" style="--c:var(--violet)">EJERCICIO 3</span><h3>Redacta un hallazgo y hazlo revisar</h3></div><p class="dim" style="margin:0">Caso ficticio: se pagaron $300,208 a un proveedor 14 horas después de que cambió su cuenta bancaria, sin evidencia de validación. Escribe el prompt para el borrador del hallazgo y otro para que la IA lo revise con escepticismo.</p>
+  <label for="e3t">Tu versión<textarea id="e3t" placeholder="Escribe aquí tu prompt…"></textarea></label>
+  <div><p class="dim" style="margin:0 0 8px">Autoevaluación</p><ul class="checks"><li><label><input type="checkbox" id="e3c0"> Pedí Condición, Criterio, Causa, Efecto y Recomendación</label></li><li><label><input type="checkbox" id="e3c1"> Fijé el público y la extensión</label></li><li><label><input type="checkbox" id="e3c2"> El segundo prompt busca afirmaciones sin evidencia</label></li><li><label><input type="checkbox" id="e3c3"> El segundo prompt no reescribe, solo observa</label></li></ul></div>
+  <details><summary>Ver solución</summary><p>Usa los prompts P-12 y P-14. El hallazgo debería quedar así:</p><div class="tablewrap"><table><tr><th>Elemento</th><th>Contenido</th></tr><tr><td>Condición</td><td>Pago realizado 14 h después de un cambio de cuenta bancaria del proveedor</td></tr><tr><td>Criterio</td><td>La política exige validar el cambio con el proveedor</td></tr><tr><td>Causa</td><td>La validación telefónica no deja evidencia</td></tr><tr><td>Efecto</td><td>Riesgo de pago a una cuenta fraudulenta</td></tr><tr><td>Recomendación</td><td>Bloquear pagos durante 72 h tras un cambio no validado</td></tr></table></div><p>La IA redacta y revisa; quien firma es el Director de Auditoría.</p></details></div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Uso responsable</span><h2>Seis hábitos para que el prompt sea evidencia</h2>
+  <ol class="steps" style="--c:var(--violet);max-width:46em"><li><span>Guarda el prompt, con sus requisitos y restricciones: es la pista de auditoría.</span></li><li><span>Documenta cómo validaste la salida y contra qué fuente.</span></li><li><span>Separa el análisis asistido por IA de tus conclusiones.</span></li><li><span>Asegúrate de poder explicar el resultado en lenguaje sencillo.</span></li><li><span>Lleva el uso de IA a la metodología de auditoría.</span></li><li><span>Revela dónde se usó IA cuando corresponda.</span></li></ol>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Los ejemplos con empresas, personas y cifras son ficticios. El uso de IA en auditoría debe ajustarse a las políticas de cada organización.</span>
+    <span class="mono">Sin cookies · <a href="sobre-mi.html#privacidad">Privacidad</a></span>
+  </div>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

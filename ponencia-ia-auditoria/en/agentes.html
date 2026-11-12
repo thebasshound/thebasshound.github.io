@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI agent workshop · Omar Sánchez</title>
+<meta name="description" content="Concepts, autonomy, governance and a self-assessment for using AI agents in internal audit.">
+<meta property="og:title" content="AI agent workshop">
+<meta property="og:description" content="Concepts, autonomy, governance and a self-assessment for using AI agents in internal audit.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="es" href="https://thebasshound.github.io/ponencia-ia-auditoria/agentes.html">
+<link rel="alternate" hreflang="en" href="https://thebasshound.github.io/ponencia-ia-auditoria/en/agentes.html">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Home">b4ssh0und<span>_</span></a>
+    <nav aria-label="Sections"><a href="index.html">Home</a><a href="presentacion.html">Deck</a><a href="prompts.html">Prompts</a><a href="agentes.html" aria-current="page">Agents</a><a href="evaluador.html">Risk triage</a><a href="recursos.html">Resources</a><a href="sobre-mi.html">About</a><a href="../juego-cisa.html">CISA game</a></nav>
+    <a class="tool" href="../agentes.html" lang="es" hreflang="es">ES</a>
+    <button class="tool" id="theme" type="button" aria-label="Switch between light and dark theme">Theme</button>
+  </div>
+</header>
+<main id="contenido">
+<div class="wrap phead"><span class="eyebrow">Workshop</span><h1>Governed AI agents</h1><p class="lead">What an agent is, how much autonomy to give it and what to require before it works on an audit.</p></div>
+<section class="first"><div class="wrap">
+  <span class="eyebrow">Concepts</span><h2>Automate, assist or act</h2>
+  <div class="grid3" style="margin-top:20px">
+    <div class="box" style="--c:var(--dim)"><span class="folio">AUTOMATION</span><h3>Runs rules</h3><p>It always does the same thing, like a macro or an analytics script.</p></div>
+    <div class="box" style="--c:var(--violet)"><span class="folio">ASSISTANT</span><h3>Answers</h3><p>It answers what you ask. You decide what to do with the answer.</p></div>
+    <div class="box" style="--c:var(--teal)"><span class="folio">AGENT</span><h3>Acts</h3><p>It receives a goal, plans the steps, uses tools and comes back with evidence.</p></div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Anatomy</span><h2>What you hand to an agent</h2>
+  <p class="sub">Treat it like a new auditor: it gets a work order, limited keys and a log it must keep.</p>
+  <div class="grid4">
+    <div class="box" style="--c:var(--amber)"><span class="folio">GOAL</span><h3>Work order</h3><p>What it must achieve and how you know it is done.</p></div>
+    <div class="box" style="--c:var(--cyan)"><span class="folio">TOOLS</span><h3>Keys</h3><p>Which systems it can enter. Read-only where possible.</p></div>
+    <div class="box" style="--c:var(--violet)"><span class="folio">MEMORY</span><h3>Log</h3><p>Every step, prompt and output is recorded.</p></div>
+    <div class="box" style="--c:var(--coral)"><span class="folio">LIMITS</span><h3>What it may not do</h3><p>Pay, delete, send or decide without a person.</p></div>
+  </div>
+  <p class="note">The data does not travel to the model: the agent works inside the organization's environment and leaves the records where they were.</p>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Autonomy</span><h2>The higher the impact, the lower the autonomy</h2>
+  <p class="sub">Autonomy is set per task. The final report and the conclusion on a control always belong to a person.</p>
+  <div class="ladder"><div><b>1 · Suggest</b>It proposes ideas; you do the work.</div><div><b>2 · Prepare</b>It leaves a draft; you review it.</div><div><b>3 · Act with approval</b>It acts once a person authorizes.</div><div><b>4 · Act and report</b>It acts alone and reports. Low-impact tasks only.</div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Governance</span><h2>Eight documents before the first agent</h2>
+  <div class="grid4" style="margin-top:20px"><div class="box" style="--c:var(--teal)"><span class="folio">01</span><h3>AI usage policy</h3><p>What is allowed, what is not and who is accountable</p></div><div class="box" style="--c:var(--teal)"><span class="folio">02</span><h3>Inventory</h3><p>Tools, agents and use cases, with version and owner</p></div><div class="box" style="--c:var(--teal)"><span class="folio">03</span><h3>Risk assessment</h3><p>Per use case, proportional to impact</p></div><div class="box" style="--c:var(--teal)"><span class="folio">04</span><h3>Documentation standard</h3><p>Prompts, versions and validation</p></div><div class="box" style="--c:var(--teal)"><span class="folio">05</span><h3>Data matrix</h3><p>Which data classification may go to which tool</p></div><div class="box" style="--c:var(--teal)"><span class="folio">06</span><h3>Roles and approvals</h3><p>Who builds, tests, publishes and uses an agent</p></div><div class="box" style="--c:var(--teal)"><span class="folio">07</span><h3>Training</h3><p>AI literacy for the whole team</p></div><div class="box" style="--c:var(--teal)"><span class="folio">08</span><h3>Incidents</h3><p>How to pause or switch off an agent, and what gets reported</p></div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Risks</span><h2>How an agent fails</h2>
+  <div class="grid4" style="margin-top:20px"><div class="box" style="--c:var(--coral)"><span class="folio">RISK</span><h3>Hidden instructions</h3><p>A document carries text the agent takes as an order.</p></div><div class="box" style="--c:var(--coral)"><span class="folio">RISK</span><h3>Excessive permissions</h3><p>It can do more than its task requires.</p></div><div class="box" style="--c:var(--coral)"><span class="folio">RISK</span><h3>Chained errors</h3><p>A mistake in step one travels all the way to the report.</p></div><div class="box" style="--c:var(--coral)"><span class="folio">RISK</span><h3>No traceability</h3><p>Nobody can reconstruct what it did or with what data.</p></div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Pilot</span><h2>A controlled pilot in six steps</h2>
+  <ol class="steps" style="max-width:46em"><li><span>Pick one specific control and test.</span></li><li><span>Set the success criterion: the same accuracy as the manual test and at least 50% less time.</span></li><li><span>Run one cycle in parallel with the manual test.</span></li><li><span>Review 100% of outputs at first; then exceptions plus a sample.</span></li><li><span>Version it: document the agent, its instructions and its sources.</span></li><li><span>Decide with data whether to scale, adjust or retire it.</span></li></ol>
+  <p class="note">Metrics to decide: accuracy against the manual test, time per test, population coverage, true versus false exceptions and human correction rate.</p>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Self-assessment</span><h2>Where is your team?</h2>
+  <p class="sub">Tick what is already true for your audit team. Nothing is saved or sent.</p>
+  <ul class="checks" id="quiz"><li><label><input type="checkbox" id="q0"> Do you have a written AI usage policy for Internal Audit?</label></li><li><label><input type="checkbox" id="q1"> Is there a list of approved AI tools by data type?</label></li><li><label><input type="checkbox" id="q2"> Do you have at least one fully automated test in real use?</label></li><li><label><input type="checkbox" id="q3"> Do you document prompts, versions and validation when you use AI?</label></li><li><label><input type="checkbox" id="q4"> Is the data you need accessible and governed?</label></li><li><label><input type="checkbox" id="q5"> Does someone review and approve every AI output before it is used as evidence?</label></li></ul>
+  <div id="quiz-out" role="status"></div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Examples with companies, people and figures are fictitious. Any use of AI in audit work must follow your organization's policies.</span>
+    <span class="mono">No cookies · <a href="sobre-mi.html#privacidad">Privacy</a></span>
+  </div>
+</footer>
+<script src="../assets/config.js"></script>
+<script src="../assets/data.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

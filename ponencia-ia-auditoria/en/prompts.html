@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt workshop for auditors · Omar Sánchez</title>
+<meta name="description" content="A builder for 16 audit prompts, guided exercises and responsible-use habits.">
+<meta property="og:title" content="Prompt workshop for auditors">
+<meta property="og:description" content="A builder for 16 audit prompts, guided exercises and responsible-use habits.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="es" href="https://thebasshound.github.io/ponencia-ia-auditoria/prompts.html">
+<link rel="alternate" hreflang="en" href="https://thebasshound.github.io/ponencia-ia-auditoria/en/prompts.html">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Home">b4ssh0und<span>_</span></a>
+    <nav aria-label="Sections"><a href="index.html">Home</a><a href="presentacion.html">Deck</a><a href="prompts.html" aria-current="page">Prompts</a><a href="agentes.html">Agents</a><a href="evaluador.html">Risk triage</a><a href="recursos.html">Resources</a><a href="sobre-mi.html">About</a><a href="../juego-cisa.html">CISA game</a></nav>
+    <a class="tool" href="../prompts.html" lang="es" hreflang="es">ES</a>
+    <button class="tool" id="theme" type="button" aria-label="Switch between light and dark theme">Theme</button>
+  </div>
+</header>
+<main id="contenido">
+<div class="wrap phead"><span class="eyebrow">Workshop</span><h1>Prompts for auditors</h1><p class="lead">Build 16 audit prompts with your own context, practice with three exercises and take away six habits that turn every prompt into evidence.</p></div>
+<section class="first"><div class="wrap">
+  <span class="eyebrow">Basics</span><h2>Eight components, one prompt</h2>
+  <p class="sub">The IIA's prompting guide for internal auditors identifies eight components. You do not always need all of them: role, context, task and format already change the result.</p>
+  <div class="example"><span style="--c:var(--amber)">You are a senior internal auditor specializing in procurement.</span> <span style="--c:var(--cyan)">We are auditing Accounts Payable at a mid-sized manufacturer running SAP; the period has 12,480 invoices.</span> <span style="--c:var(--teal)">Propose 10 procedures to test the three-way match.</span> <span style="--c:var(--violet)">Return a table: Risk · Procedure · Test type · Evidence.</span> <span style="--c:var(--coral)">Preventive controls only; two sentences per cell at most.</span> <span style="--c:var(--amber)">Use this style: “Inspect that every invoice has an approved PO and receipt before payment.”</span> <span style="--c:var(--cyan)">Before listing, think step by step about where the control can fail.</span> <span style="--c:var(--teal)">If you are missing information, ask me before answering.</span></div><ul class="legend"><li style="--c:var(--amber)">Role: Perspective and vocabulary</li><li style="--c:var(--cyan)">Context: What the AI does not know about you</li><li style="--c:var(--teal)">Task: What to do, specifically</li><li style="--c:var(--violet)">Format: How to deliver it</li><li style="--c:var(--coral)">Constraints: Scope limits</li><li style="--c:var(--amber)">Example: The style you expect</li><li style="--c:var(--cyan)">Reasoning: Think before answering</li><li style="--c:var(--teal)">Conversation: Ask if something is missing</li></ul>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Techniques</span><h2>Five techniques and when to use them</h2>
+  <p class="sub">The riskier the task, the more structure and human review it needs.</p>
+  <div class="tablewrap"><table><tr><th>Technique</th><th>When</th><th>Example</th></tr><tr><td><b>Zero-shot</b></td><td>Simple, low-risk tasks</td><td class='mono' style='font-size:14px'>“List five fraud risk indicators in payroll.”</td></tr><tr><td><b>Few-shot</b></td><td>When format matters</td><td class='mono' style='font-size:14px'>“Here is a model action plan. Write one like it for…”</td></tr><tr><td><b>Step by step</b></td><td>Risks, walkthroughs and control gaps</td><td class='mono' style='font-size:14px'>“Think step by step through vendor onboarding risks, then summarize the top five.”</td></tr><tr><td><b>Role prompting</b></td><td>To take a specialist's view</td><td class='mono' style='font-size:14px'>“You are a SOX 404 expert. Would this control meet what the external auditor expects?”</td></tr><tr><td><b>Iterative</b></td><td>Planning and complex engagements</td><td class='mono' style='font-size:14px'>Risks → objective for risk 3 → evidence and sampling → workpaper template</td></tr></table></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Builder</span><h2>The 16 prompts, with your context</h2>
+  <p class="sub">Pick a phase, fill in the fields and copy the prompt. IIA means it comes from the IIA guide, translated and adapted; OWN means it is this talk's proposal. Do not paste confidential data into unapproved tools.</p>
+  <div id="gen"></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Practice</span><h2>Three guided exercises</h2>
+  <p class="sub">Write your version, check it against the list and compare with the solution. What you write is not saved or sent.</p>
+  <div style="display:grid;gap:16px"><div class="box ex"><div><span class="folio" style="--c:var(--violet)">EXERCISE 1</span><h3>Fix this prompt</h3></div><p class="out">“Review this control and tell me if it is OK.”</p><p class="dim" style="margin:0">Control: “The Purchasing manager periodically reviews additions and changes to the vendor master.” Rewrite the prompt using at least five of the eight components.</p>
+  <label for="e1t">Your version<textarea id="e1t" placeholder="Write your prompt here…"></textarea></label>
+  <div><p class="dim" style="margin:0 0 8px">Self-check</p><ul class="checks"><li><label><input type="checkbox" id="e1c0"> I gave it a role</label></li><li><label><input type="checkbox" id="e1c1"> I explained the process context</label></li><li><label><input type="checkbox" id="e1c2"> The task says what to find</label></li><li><label><input type="checkbox" id="e1c3"> I asked for a format</label></li><li><label><input type="checkbox" id="e1c4"> I set a limit or asked it to ask me</label></li></ul></div>
+  <details><summary>Show solution</summary><p class="out">You are a controls audit specialist. The control belongs to the Accounts Payable process; vendors are created in SAP. Identify (A) design deficiencies, (B) ambiguous wording that makes it hard to test and (C) improvements. Answer in a table with those three columns. Do not assess operation, only design. If you need process data, ask me.</p><p>A good answer notes that “periodically” gives no frequency, that it is unclear whether all additions or a sample are reviewed, what evidence is left, whether duties are segregated between who creates and who reviews, and what happens when an error is found.</p></details></div><div class="box ex"><div><span class="folio" style="--c:var(--violet)">EXERCISE 2</span><h3>Extract data without the AI guessing</h3></div><p class="dim" style="margin:0">You have 20 scanned invoices. Write a prompt that extracts number, vendor, date and total amount, and that cannot make up a doubtful value.</p>
+  <label for="e2t">Your version<textarea id="e2t" placeholder="Write your prompt here…"></textarea></label>
+  <div><p class="dim" style="margin:0 0 8px">Self-check</p><ul class="checks"><li><label><input type="checkbox" id="e2c0"> I banned inferring or estimating</label></li><li><label><input type="checkbox" id="e2c1"> I asked it to flag doubtful items as “unclear”</label></li><li><label><input type="checkbox" id="e2c2"> I asked for a reference to the source text</label></li><li><label><input type="checkbox" id="e2c3"> I asked for one row per invoice</label></li></ul></div>
+  <details><summary>Show solution</summary><p>Use prompt P-09 in the builder. A verifiable output looks like this (fictitious data):</p><div class="tablewrap"><table><tr><th>Invoice</th><th>Vendor</th><th>Amount</th><th>Source</th></tr><tr><td>A-1021</td><td>Proveedora Ejemplo</td><td>$48,720.00</td><td>p.1 “Total due”</td></tr><tr><td>B-0387</td><td>Servicios Demo</td><td>$300,208.00</td><td>p.2 “Net amount”</td></tr><tr><td>C-5510</td><td>Logística Ficticia</td><td><b>UNCLEAR</b></td><td>Two different totals (p.1 and p.3)</td></tr></table></div><p>The row that matters is the third: the AI did not pick a total for you.</p></details></div><div class="box ex"><div><span class="folio" style="--c:var(--violet)">EXERCISE 3</span><h3>Draft a finding and have it challenged</h3></div><p class="dim" style="margin:0">Fictitious case: $300,208 was paid to a vendor 14 hours after its bank account was changed, with no evidence of validation. Write the prompt for the draft finding and a second one asking the AI to review it skeptically.</p>
+  <label for="e3t">Your version<textarea id="e3t" placeholder="Write your prompt here…"></textarea></label>
+  <div><p class="dim" style="margin:0 0 8px">Self-check</p><ul class="checks"><li><label><input type="checkbox" id="e3c0"> I asked for Condition, Criteria, Cause, Effect and Recommendation</label></li><li><label><input type="checkbox" id="e3c1"> I set the audience and the length</label></li><li><label><input type="checkbox" id="e3c2"> The second prompt looks for unsupported statements</label></li><li><label><input type="checkbox" id="e3c3"> The second prompt does not rewrite, it only observes</label></li></ul></div>
+  <details><summary>Show solution</summary><p>Use prompts P-12 and P-14. The finding should read like this:</p><div class="tablewrap"><table><tr><th>Element</th><th>Content</th></tr><tr><td>Condition</td><td>Payment made 14 h after a change to the vendor’s bank account</td></tr><tr><td>Criteria</td><td>Policy requires validating the change with the vendor</td></tr><tr><td>Cause</td><td>Phone validation leaves no evidence</td></tr><tr><td>Effect</td><td>Risk of paying a fraudulent account</td></tr><tr><td>Recommendation</td><td>Block payments for 72 h after an unvalidated change</td></tr></table></div><p>The AI drafts and reviews; the Chief Audit Executive signs.</p></details></div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Responsible use</span><h2>Six habits that make a prompt evidence</h2>
+  <ol class="steps" style="--c:var(--violet);max-width:46em"><li><span>Keep the prompt, with its requirements and constraints: it is the audit trail.</span></li><li><span>Document how you validated the output and against which source.</span></li><li><span>Separate AI-assisted analysis from your own conclusions.</span></li><li><span>Make sure you can explain the result in plain language.</span></li><li><span>Bring AI use into the audit methodology.</span></li><li><span>Disclose where AI was used when appropriate.</span></li></ol>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Examples with companies, people and figures are fictitious. Any use of AI in audit work must follow your organization's policies.</span>
+    <span class="mono">No cookies · <a href="sobre-mi.html#privacidad">Privacy</a></span>
+  </div>
+</footer>
+<script src="../assets/config.js"></script>
+<script src="../assets/data.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

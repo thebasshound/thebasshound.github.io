@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taller de agentes de IA · Omar Sánchez</title>
+<meta name="description" content="Conceptos, autonomía, gobierno y autodiagnóstico para usar agentes de IA en auditoría interna.">
+<meta property="og:title" content="Taller de agentes de IA">
+<meta property="og:description" content="Conceptos, autonomía, gobierno y autodiagnóstico para usar agentes de IA en auditoría interna.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="es" href="https://thebasshound.github.io/ponencia-ia-auditoria/agentes.html">
+<link rel="alternate" hreflang="en" href="https://thebasshound.github.io/ponencia-ia-auditoria/en/agentes.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Inicio">b4ssh0und<span>_</span></a>
+    <nav aria-label="Secciones"><a href="index.html">Inicio</a><a href="presentacion.html">Presentación</a><a href="prompts.html">Prompts</a><a href="agentes.html" aria-current="page">Agentes</a><a href="evaluador.html">Evaluador</a><a href="recursos.html">Recursos</a><a href="sobre-mi.html">Sobre mí</a><a href="juego-cisa.html">Juego CISA</a></nav>
+    <a class="tool" href="en/agentes.html" lang="en" hreflang="en">EN</a>
+    <button class="tool" id="theme" type="button" aria-label="Cambiar entre tema claro y oscuro">Tema</button>
+  </div>
+</header>
+<main id="contenido">
+<div class="wrap phead"><span class="eyebrow">Taller</span><h1>Agentes de IA con gobierno</h1><p class="lead">Qué es un agente, cuánta autonomía darle y qué exigir antes de ponerlo a trabajar en una auditoría.</p></div>
+<section class="first"><div class="wrap">
+  <span class="eyebrow">Conceptos</span><h2>Automatizar, asistir o actuar</h2>
+  <div class="grid3" style="margin-top:20px">
+    <div class="box" style="--c:var(--dim)"><span class="folio">AUTOMATIZACIÓN</span><h3>Ejecuta reglas</h3><p>Hace siempre lo mismo, como una macro o un script de analítica.</p></div>
+    <div class="box" style="--c:var(--violet)"><span class="folio">ASISTENTE</span><h3>Responde</h3><p>Contesta lo que le preguntas. Tú decides qué hacer con la respuesta.</p></div>
+    <div class="box" style="--c:var(--teal)"><span class="folio">AGENTE</span><h3>Actúa</h3><p>Recibe un objetivo, planea los pasos, usa herramientas y regresa con evidencia.</p></div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Anatomía</span><h2>Lo que le entregas a un agente</h2>
+  <p class="sub">Trátalo como a un auditor nuevo: recibe una orden de trabajo, llaves limitadas y una bitácora que debe llenar.</p>
+  <div class="grid4">
+    <div class="box" style="--c:var(--amber)"><span class="folio">OBJETIVO</span><h3>Orden de trabajo</h3><p>Qué debe lograr y con qué criterio se da por terminado.</p></div>
+    <div class="box" style="--c:var(--cyan)"><span class="folio">HERRAMIENTAS</span><h3>Llaves</h3><p>A qué sistemas entra. De preferencia, solo lectura.</p></div>
+    <div class="box" style="--c:var(--violet)"><span class="folio">MEMORIA</span><h3>Bitácora</h3><p>Cada paso, prompt y salida queda registrado.</p></div>
+    <div class="box" style="--c:var(--coral)"><span class="folio">LÍMITES</span><h3>Qué no puede hacer</h3><p>Pagar, borrar, enviar o decidir sin una persona.</p></div>
+  </div>
+  <p class="note">Los datos no salen a buscar al modelo: el agente trabaja dentro del entorno de la organización y deja los registros donde estaban.</p>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Autonomía</span><h2>A más impacto, menos autonomía</h2>
+  <p class="sub">La autonomía se ajusta por tarea. El informe final y la conclusión sobre un control son siempre de una persona.</p>
+  <div class="ladder"><div><b>1 · Sugerir</b>Propone ideas; tú haces el trabajo.</div><div><b>2 · Preparar</b>Deja un borrador; tú lo revisas.</div><div><b>3 · Ejecutar con aprobación</b>Actúa cuando una persona autoriza.</div><div><b>4 · Ejecutar y reportar</b>Actúa sola y avisa. Solo para tareas de bajo impacto.</div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Gobierno</span><h2>Ocho documentos antes del primer agente</h2>
+  <div class="grid4" style="margin-top:20px"><div class="box" style="--c:var(--teal)"><span class="folio">01</span><h3>Política de uso de IA</h3><p>Qué se permite, qué no y quién responde</p></div><div class="box" style="--c:var(--teal)"><span class="folio">02</span><h3>Inventario</h3><p>Herramientas, agentes y casos de uso, con versión y dueño</p></div><div class="box" style="--c:var(--teal)"><span class="folio">03</span><h3>Evaluación de riesgos</h3><p>Por caso de uso, proporcional al impacto</p></div><div class="box" style="--c:var(--teal)"><span class="folio">04</span><h3>Estándar de documentación</h3><p>Prompts, versiones y validación</p></div><div class="box" style="--c:var(--teal)"><span class="folio">05</span><h3>Matriz de datos</h3><p>Qué clasificación de datos puede ir a qué herramienta</p></div><div class="box" style="--c:var(--teal)"><span class="folio">06</span><h3>Roles y aprobaciones</h3><p>Quién crea, prueba, publica y usa un agente</p></div><div class="box" style="--c:var(--teal)"><span class="folio">07</span><h3>Capacitación</h3><p>Alfabetización en IA para todo el equipo</p></div><div class="box" style="--c:var(--teal)"><span class="folio">08</span><h3>Incidentes</h3><p>Cómo pausar o apagar un agente y qué se reporta</p></div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Riesgos</span><h2>Cómo falla un agente</h2>
+  <div class="grid4" style="margin-top:20px"><div class="box" style="--c:var(--coral)"><span class="folio">RIESGO</span><h3>Instrucciones ocultas</h3><p>Un documento trae texto que el agente toma como orden.</p></div><div class="box" style="--c:var(--coral)"><span class="folio">RIESGO</span><h3>Permisos excesivos</h3><p>Puede hacer más de lo que su tarea necesita.</p></div><div class="box" style="--c:var(--coral)"><span class="folio">RIESGO</span><h3>Errores encadenados</h3><p>Un error en el primer paso llega hasta el informe.</p></div><div class="box" style="--c:var(--coral)"><span class="folio">RIESGO</span><h3>Sin trazabilidad</h3><p>Nadie puede reconstruir qué hizo ni con qué datos.</p></div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Piloto</span><h2>Un piloto controlado en seis pasos</h2>
+  <ol class="steps" style="max-width:46em"><li><span>Elige un control y una prueba concretos.</span></li><li><span>Fija el criterio de éxito: la misma exactitud que la prueba manual y al menos 50% menos tiempo.</span></li><li><span>Corre un ciclo en paralelo con la prueba manual.</span></li><li><span>Revisa el 100% de las salidas al inicio; después, las excepciones y una muestra.</span></li><li><span>Versiona: documenta el agente, sus instrucciones y sus fuentes.</span></li><li><span>Decide con datos si se escala, se ajusta o se retira.</span></li></ol>
+  <p class="note">Métricas para decidir: exactitud contra la prueba manual, tiempo por prueba, cobertura de la población, excepciones verdaderas contra falsas y tasa de corrección humana.</p>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Autodiagnóstico</span><h2>¿En qué nivel está tu equipo?</h2>
+  <p class="sub">Marca lo que ya es cierto para tu equipo de auditoría. Nada se guarda ni se envía.</p>
+  <ul class="checks" id="quiz"><li><label><input type="checkbox" id="q0"> ¿Tienen una política escrita de uso de IA para Auditoría Interna?</label></li><li><label><input type="checkbox" id="q1"> ¿Hay una lista de herramientas de IA aprobadas por tipo de dato?</label></li><li><label><input type="checkbox" id="q2"> ¿Tienen al menos una prueba automatizada al 100%, en uso real?</label></li><li><label><input type="checkbox" id="q3"> ¿Documentan prompts, versiones y validación cuando usan IA?</label></li><li><label><input type="checkbox" id="q4"> ¿Los datos que necesitan están accesibles y gobernados?</label></li><li><label><input type="checkbox" id="q5"> ¿Alguien revisa y aprueba cada salida de IA antes de usarla como evidencia?</label></li></ul>
+  <div id="quiz-out" role="status"></div>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Los ejemplos con empresas, personas y cifras son ficticios. El uso de IA en auditoría debe ajustarse a las políticas de cada organización.</span>
+    <span class="mono">Sin cookies · <a href="sobre-mi.html#privacidad">Privacidad</a></span>
+  </div>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
